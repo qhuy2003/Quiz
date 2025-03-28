@@ -5,7 +5,7 @@ import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars,faBook } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button/Button";
 
 const cx = classNames.bind(styles);
@@ -15,7 +15,8 @@ function Header({ data }) {
 
   return (
     <header className={cx("container")}>
-      <div className={cx("home")}>Trang chủ</div>
+<div className={cx("home")} style={{fontSize: "24px",fontWeight: "bold"}}> 
+<FontAwesomeIcon icon={faBook}/> Edu Quiz</div>
 
       {/* Icon menu chỉ hiển thị trên mobile */}
       <div className={cx("menu-toggle")} onClick={() => setShowMenu(!showMenu)}>
